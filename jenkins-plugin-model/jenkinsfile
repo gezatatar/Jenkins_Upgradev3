@@ -40,13 +40,6 @@ pipeline {
             }
         }
 
-#        stage('Unit Test') {
-#            steps {
-#                sh 'chmod +x ./jenkins-plugin-model/ci/03-unit-test.sh && ./jenkins-plugin-model/ci/03-unit-test.sh'
-#                mstest testResultsFile:"**/*.trx"
-#            }
-#        }
-
         stage('Push Docker Image') {
             steps {
                 script {
